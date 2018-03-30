@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+
+</head>
+<body>
+
+
+
+<p><strong>Modifier : </strong></p>
+
+<form name="form" th:action="@{|/ram/${ram.id}|}" th:object="${ram}"  method="POST">
+
+    <input th:type="hidden" th:name="_method" th:value="PUT">
+    <label>Marque:</label> <input type="text" id="marque" th:field="*{marque}">
+    <input type="submit" value="Modifier">
+
+</form>
+
+<p><strong>Supprimer : </strong></p>
+
+<form name="form" th:action="@{|/ram/${ram.id}|}" th:object="${ram}"  method="POST">
+    <input th:type="hidden" th:name="_method" th:value="DELETE">
+    <input type="submit" value="Supprimer">
+</form>
+
+
+<p><strong>Affichage : </strong></p>
+<div>
+        <li th:text="${ram.id}" ></li>
+        <li th:text="${ram.marque}" ></li>
+
+
+</div>
+
+</body>
+</html>

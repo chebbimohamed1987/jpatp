@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+
+</head>
+<body>
+
+
+<div>
+    <ul th:each="ordinateur:${liste}">
+
+
+        <li th:text="${ordinateur.id}" ></li>
+        <li th:text="${ordinateur.marque}" ></li>
+        <ul th:each="ram:${ordinateur.rams}">
+            <li th:text="${ram.id}" ></li>
+            <li th:text="${ram.marque}" ></li>
+        </ul>
+    </ul>
+
+
+
+</div>

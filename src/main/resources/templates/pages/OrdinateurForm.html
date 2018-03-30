@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+
+</head>
+<body>
+
+
+
+<p><strong>Nouvel Ordinateur : </strong></p>
+
+<form name="form" th:action="@{/ordinateur}" th:object="${ordinateur}"  method="POST">
+
+    <label>Marque:</label> <input type="text" id="marque" th:field="*{marque}">
+    <input type="submit" value="Ajouter">
+
+</form>
+
+
+</body>
+</html>
